@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC1A13D52AE0659A008F25E8 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13D42AE0659A008F25E8 /* Squiggle.swift */; };
+		FC1A13D72AE065BA008F25E8 /* Oval.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13D62AE065BA008F25E8 /* Oval.swift */; };
+		FC1A13D92AE065CC008F25E8 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13D82AE065CC008F25E8 /* Diamond.swift */; };
+		FC1A13DB2AE07741008F25E8 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13DA2AE07741008F25E8 /* Cardify.swift */; };
+		FC1A13DD2AE07787008F25E8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13DC2AE07787008F25E8 /* CardView.swift */; };
+		FC3335D62ADE04A30035FDC6 /* Lunt_Owen_Project_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3335D52ADE04A30035FDC6 /* Lunt_Owen_Project_1App.swift */; };
+		FC3335D82ADE04A30035FDC6 /* SetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3335D72ADE04A30035FDC6 /* SetGameView.swift */; };
+		FC3335DA2ADE04A40035FDC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3335D92ADE04A40035FDC6 /* Assets.xcassets */; };
+		FC3335DD2ADE04A40035FDC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3335DC2ADE04A40035FDC6 /* Preview Assets.xcassets */; };
+		FC3335E72ADE04A50035FDC6 /* Lunt_Owen_Project_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3335E62ADE04A50035FDC6 /* Lunt_Owen_Project_1Tests.swift */; };
+		FC3335F12ADE04A50035FDC6 /* Lunt_Owen_Project_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3335F02ADE04A50035FDC6 /* Lunt_Owen_Project_1UITests.swift */; };
+		FC3335F32ADE04A50035FDC6 /* Lunt_Owen_Project_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3335F22ADE04A50035FDC6 /* Lunt_Owen_Project_1UITestsLaunchTests.swift */; };
+		FC5C4CD92AE20C1300E84C08 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4CD82AE20C1300E84C08 /* Card.swift */; };
+		FC5C4CDB2AE2111E00E84C08 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4CDA2AE2111E00E84C08 /* SetGame.swift */; };
+		FC5C4CDD2AE2147800E84C08 /* SetGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4CDC2AE2147800E84C08 /* SetGameViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC3335E32ADE04A50035FDC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3335CA2ADE04A30035FDC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3335D12ADE04A30035FDC6;
+			remoteInfo = "Lunt Owen Project 1";
+		};
+		FC3335ED2ADE04A50035FDC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3335CA2ADE04A30035FDC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3335D12ADE04A30035FDC6;
+			remoteInfo = "Lunt Owen Project 1";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC1A13D42AE0659A008F25E8 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
+		FC1A13D62AE065BA008F25E8 /* Oval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oval.swift; sourceTree = "<group>"; };
+		FC1A13D82AE065CC008F25E8 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
+		FC1A13DA2AE07741008F25E8 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
+		FC1A13DC2AE07787008F25E8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FC3335D22ADE04A30035FDC6 /* Lunt Owen Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunt Owen Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3335D52ADE04A30035FDC6 /* Lunt_Owen_Project_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunt_Owen_Project_1App.swift; sourceTree = "<group>"; };
+		FC3335D72ADE04A30035FDC6 /* SetGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameView.swift; sourceTree = "<group>"; };
+		FC3335D92ADE04A40035FDC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC3335DC2ADE04A40035FDC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC3335E22ADE04A50035FDC6 /* Lunt Owen Project 1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lunt Owen Project 1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3335E62ADE04A50035FDC6 /* Lunt_Owen_Project_1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunt_Owen_Project_1Tests.swift; sourceTree = "<group>"; };
+		FC3335EC2ADE04A50035FDC6 /* Lunt Owen Project 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lunt Owen Project 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3335F02ADE04A50035FDC6 /* Lunt_Owen_Project_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunt_Owen_Project_1UITests.swift; sourceTree = "<group>"; };
+		FC3335F22ADE04A50035FDC6 /* Lunt_Owen_Project_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunt_Owen_Project_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC5C4CD82AE20C1300E84C08 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FC5C4CDA2AE2111E00E84C08 /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		FC5C4CDC2AE2147800E84C08 /* SetGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC3335CF2ADE04A30035FDC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3335DF2ADE04A50035FDC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3335E92ADE04A50035FDC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC1A13D12AE06553008F25E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC3335D52ADE04A30035FDC6 /* Lunt_Owen_Project_1App.swift */,
+				FC3335D72ADE04A30035FDC6 /* SetGameView.swift */,
+				FC1A13D42AE0659A008F25E8 /* Squiggle.swift */,
+				FC1A13D62AE065BA008F25E8 /* Oval.swift */,
+				FC1A13D82AE065CC008F25E8 /* Diamond.swift */,
+				FC1A13DA2AE07741008F25E8 /* Cardify.swift */,
+				FC1A13DC2AE07787008F25E8 /* CardView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC1A13D22AE0655F008F25E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C4CDC2AE2147800E84C08 /* SetGameViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC1A13D32AE06569008F25E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C4CD82AE20C1300E84C08 /* Card.swift */,
+				FC5C4CDA2AE2111E00E84C08 /* SetGame.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC3335C92ADE04A30035FDC6 = {
+			isa = PBXGroup;
+			children = (
+				FC3335D42ADE04A30035FDC6 /* Lunt Owen Project 1 */,
+				FC3335E52ADE04A50035FDC6 /* Lunt Owen Project 1Tests */,
+				FC3335EF2ADE04A50035FDC6 /* Lunt Owen Project 1UITests */,
+				FC3335D32ADE04A30035FDC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC3335D32ADE04A30035FDC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC3335D22ADE04A30035FDC6 /* Lunt Owen Project 1.app */,
+				FC3335E22ADE04A50035FDC6 /* Lunt Owen Project 1Tests.xctest */,
+				FC3335EC2ADE04A50035FDC6 /* Lunt Owen Project 1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC3335D42ADE04A30035FDC6 /* Lunt Owen Project 1 */ = {
+			isa = PBXGroup;
+			children = (
+				FC1A13D32AE06569008F25E8 /* Model */,
+				FC1A13D22AE0655F008F25E8 /* ViewModel */,
+				FC1A13D12AE06553008F25E8 /* View */,
+				FC3335D92ADE04A40035FDC6 /* Assets.xcassets */,
+				FC3335DB2ADE04A40035FDC6 /* Preview Content */,
+			);
+			path = "Lunt Owen Project 1";
+			sourceTree = "<group>";
+		};
+		FC3335DB2ADE04A40035FDC6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FC3335DC2ADE04A40035FDC6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC3335E52ADE04A50035FDC6 /* Lunt Owen Project 1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FC3335E62ADE04A50035FDC6 /* Lunt_Owen_Project_1Tests.swift */,
+			);
+			path = "Lunt Owen Project 1Tests";
+			sourceTree = "<group>";
+		};
+		FC3335EF2ADE04A50035FDC6 /* Lunt Owen Project 1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC3335F02ADE04A50035FDC6 /* Lunt_Owen_Project_1UITests.swift */,
+				FC3335F22ADE04A50035FDC6 /* Lunt_Owen_Project_1UITestsLaunchTests.swift */,
+			);
+			path = "Lunt Owen Project 1UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC3335D12ADE04A30035FDC6 /* Lunt Owen Project 1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3335F62ADE04A50035FDC6 /* Build configuration list for PBXNativeTarget "Lunt Owen Project 1" */;
+			buildPhases = (
+				FC3335CE2ADE04A30035FDC6 /* Sources */,
+				FC3335CF2ADE04A30035FDC6 /* Frameworks */,
+				FC3335D02ADE04A30035FDC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lunt Owen Project 1";
+			productName = "Lunt Owen Project 1";
+			productReference = FC3335D22ADE04A30035FDC6 /* Lunt Owen Project 1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC3335E12ADE04A50035FDC6 /* Lunt Owen Project 1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3335F92ADE04A50035FDC6 /* Build configuration list for PBXNativeTarget "Lunt Owen Project 1Tests" */;
+			buildPhases = (
+				FC3335DE2ADE04A50035FDC6 /* Sources */,
+				FC3335DF2ADE04A50035FDC6 /* Frameworks */,
+				FC3335E02ADE04A50035FDC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3335E42ADE04A50035FDC6 /* PBXTargetDependency */,
+			);
+			name = "Lunt Owen Project 1Tests";
+			productName = "Lunt Owen Project 1Tests";
+			productReference = FC3335E22ADE04A50035FDC6 /* Lunt Owen Project 1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC3335EB2ADE04A50035FDC6 /* Lunt Owen Project 1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3335FC2ADE04A50035FDC6 /* Build configuration list for PBXNativeTarget "Lunt Owen Project 1UITests" */;
+			buildPhases = (
+				FC3335E82ADE04A50035FDC6 /* Sources */,
+				FC3335E92ADE04A50035FDC6 /* Frameworks */,
+				FC3335EA2ADE04A50035FDC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3335EE2ADE04A50035FDC6 /* PBXTargetDependency */,
+			);
+			name = "Lunt Owen Project 1UITests";
+			productName = "Lunt Owen Project 1UITests";
+			productReference = FC3335EC2ADE04A50035FDC6 /* Lunt Owen Project 1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC3335CA2ADE04A30035FDC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					FC3335D12ADE04A30035FDC6 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					FC3335E12ADE04A50035FDC6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = FC3335D12ADE04A30035FDC6;
+					};
+					FC3335EB2ADE04A50035FDC6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = FC3335D12ADE04A30035FDC6;
+					};
+				};
+			};
+			buildConfigurationList = FC3335CD2ADE04A30035FDC6 /* Build configuration list for PBXProject "Lunt Owen Project 1" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC3335C92ADE04A30035FDC6;
+			productRefGroup = FC3335D32ADE04A30035FDC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC3335D12ADE04A30035FDC6 /* Lunt Owen Project 1 */,
+				FC3335E12ADE04A50035FDC6 /* Lunt Owen Project 1Tests */,
+				FC3335EB2ADE04A50035FDC6 /* Lunt Owen Project 1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC3335D02ADE04A30035FDC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3335DD2ADE04A40035FDC6 /* Preview Assets.xcassets in Resources */,
+				FC3335DA2ADE04A40035FDC6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3335E02ADE04A50035FDC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3335EA2ADE04A50035FDC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC3335CE2ADE04A30035FDC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC5C4CD92AE20C1300E84C08 /* Card.swift in Sources */,
+				FC5C4CDB2AE2111E00E84C08 /* SetGame.swift in Sources */,
+				FC1A13DD2AE07787008F25E8 /* CardView.swift in Sources */,
+				FC1A13DB2AE07741008F25E8 /* Cardify.swift in Sources */,
+				FC1A13D52AE0659A008F25E8 /* Squiggle.swift in Sources */,
+				FC3335D82ADE04A30035FDC6 /* SetGameView.swift in Sources */,
+				FC3335D62ADE04A30035FDC6 /* Lunt_Owen_Project_1App.swift in Sources */,
+				FC1A13D92AE065CC008F25E8 /* Diamond.swift in Sources */,
+				FC1A13D72AE065BA008F25E8 /* Oval.swift in Sources */,
+				FC5C4CDD2AE2147800E84C08 /* SetGameViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3335DE2ADE04A50035FDC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3335E72ADE04A50035FDC6 /* Lunt_Owen_Project_1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3335E82ADE04A50035FDC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3335F32ADE04A50035FDC6 /* Lunt_Owen_Project_1UITestsLaunchTests.swift in Sources */,
+				FC3335F12ADE04A50035FDC6 /* Lunt_Owen_Project_1UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC3335E42ADE04A50035FDC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3335D12ADE04A30035FDC6 /* Lunt Owen Project 1 */;
+			targetProxy = FC3335E32ADE04A50035FDC6 /* PBXContainerItemProxy */;
+		};
+		FC3335EE2ADE04A50035FDC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3335D12ADE04A30035FDC6 /* Lunt Owen Project 1 */;
+			targetProxy = FC3335ED2ADE04A50035FDC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FC3335F42ADE04A50035FDC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC3335F52ADE04A50035FDC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC3335F72ADE04A50035FDC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lunt Owen Project 1/Preview Content\"";
+				DEVELOPMENT_TEAM = 7B9JGS7KQP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IS543.Lunt-Owen-Project-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC3335F82ADE04A50035FDC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lunt Owen Project 1/Preview Content\"";
+				DEVELOPMENT_TEAM = 7B9JGS7KQP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IS543.Lunt-Owen-Project-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC3335FA2ADE04A50035FDC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7B9JGS7KQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IS543.Lunt-Owen-Project-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lunt Owen Project 1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lunt Owen Project 1";
+			};
+			name = Debug;
+		};
+		FC3335FB2ADE04A50035FDC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7B9JGS7KQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IS543.Lunt-Owen-Project-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lunt Owen Project 1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lunt Owen Project 1";
+			};
+			name = Release;
+		};
+		FC3335FD2ADE04A50035FDC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7B9JGS7KQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IS543.Lunt-Owen-Project-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Lunt Owen Project 1";
+			};
+			name = Debug;
+		};
+		FC3335FE2ADE04A50035FDC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7B9JGS7KQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IS543.Lunt-Owen-Project-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Lunt Owen Project 1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC3335CD2ADE04A30035FDC6 /* Build configuration list for PBXProject "Lunt Owen Project 1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3335F42ADE04A50035FDC6 /* Debug */,
+				FC3335F52ADE04A50035FDC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3335F62ADE04A50035FDC6 /* Build configuration list for PBXNativeTarget "Lunt Owen Project 1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3335F72ADE04A50035FDC6 /* Debug */,
+				FC3335F82ADE04A50035FDC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3335F92ADE04A50035FDC6 /* Build configuration list for PBXNativeTarget "Lunt Owen Project 1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3335FA2ADE04A50035FDC6 /* Debug */,
+				FC3335FB2ADE04A50035FDC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3335FC2ADE04A50035FDC6 /* Build configuration list for PBXNativeTarget "Lunt Owen Project 1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3335FD2ADE04A50035FDC6 /* Debug */,
+				FC3335FE2ADE04A50035FDC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC3335CA2ADE04A30035FDC6 /* Project object */;
+}
