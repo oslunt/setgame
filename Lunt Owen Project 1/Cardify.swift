@@ -23,17 +23,22 @@ struct Cardify: Animatable, ViewModifier {
     }
     
     private func cornerRadius(for size: CGSize) -> Double {
-        return min(size.width, size.height) * 0.08
+        return min(size.width, size.height) * Constants.cornerRadiusMultiplier
     }
     
     private var fillColor: Color {
         if card.props.status == .matched {
-            return Color.green.opacity(0.5)
+            return Color.green.opacity(Constants.fillColorOpacity)
         } else if card.props.status == .selected {
-            return Color.gray.opacity(0.5)
+            return Color.gray.opacity(Constants.fillColorOpacity)
         } else {
             return Color.white
         }
+    }
+    
+    private struct Constants {
+        static let cornerRadiusMultiplier: Double = 0.08
+        static let fillColorOpacity: Double = 0.5
     }
 }
 

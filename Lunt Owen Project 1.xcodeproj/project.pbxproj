@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FC1A13D52AE0659A008F25E8 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13D42AE0659A008F25E8 /* Squiggle.swift */; };
-		FC1A13D72AE065BA008F25E8 /* Oval.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13D62AE065BA008F25E8 /* Oval.swift */; };
 		FC1A13D92AE065CC008F25E8 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13D82AE065CC008F25E8 /* Diamond.swift */; };
 		FC1A13DB2AE07741008F25E8 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13DA2AE07741008F25E8 /* Cardify.swift */; };
 		FC1A13DD2AE07787008F25E8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1A13DC2AE07787008F25E8 /* CardView.swift */; };
@@ -43,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		FC1A13D42AE0659A008F25E8 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
-		FC1A13D62AE065BA008F25E8 /* Oval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oval.swift; sourceTree = "<group>"; };
 		FC1A13D82AE065CC008F25E8 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		FC1A13DA2AE07741008F25E8 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		FC1A13DC2AE07787008F25E8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				FC3335D52ADE04A30035FDC6 /* Lunt_Owen_Project_1App.swift */,
 				FC3335D72ADE04A30035FDC6 /* SetGameView.swift */,
 				FC1A13D42AE0659A008F25E8 /* Squiggle.swift */,
-				FC1A13D62AE065BA008F25E8 /* Oval.swift */,
 				FC1A13D82AE065CC008F25E8 /* Diamond.swift */,
 				FC1A13DA2AE07741008F25E8 /* Cardify.swift */,
 				FC1A13DC2AE07787008F25E8 /* CardView.swift */,
@@ -313,7 +310,6 @@
 				FC3335D82ADE04A30035FDC6 /* SetGameView.swift in Sources */,
 				FC3335D62ADE04A30035FDC6 /* Lunt_Owen_Project_1App.swift in Sources */,
 				FC1A13D92AE065CC008F25E8 /* Diamond.swift in Sources */,
-				FC1A13D72AE065BA008F25E8 /* Oval.swift in Sources */,
 				FC5C4CDD2AE2147800E84C08 /* SetGameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

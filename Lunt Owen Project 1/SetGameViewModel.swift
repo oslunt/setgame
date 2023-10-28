@@ -15,19 +15,19 @@ import SwiftUI
     }
     
     func dealCards(numberOfCards: Int) {
-        withAnimation(.easeIn(duration: 0.6)) {
+        withAnimation(.easeIn(duration: Constants.animationDuration)) {
             game.dealCards(numberOfCards: numberOfCards)
         }
     }
     
-    func selectCard(card: Card) {
-        withAnimation(.easeIn(duration: 0.6)) {
+    func chooseCard(card: Card) {
+        withAnimation(.easeIn(duration: Constants.animationDuration)) {
             game.choose(card: card)
         }
     }
     
     func newGame() {
-        withAnimation(.easeIn(duration: 0.6)) {
+        withAnimation(.easeIn(duration: Constants.animationDuration)) {
             game = SetGameViewModel.createGame()
             dealCards(numberOfCards: Constants.initialDealCardsAmount)
         }
@@ -36,8 +36,13 @@ import SwiftUI
     var dealtCards: [Card] {
         game.dealtCards
     }
+    
+    var deck: [Card] {
+        game.deck
+    }
 }
 
 private struct Constants {
     static let initialDealCardsAmount = 12
+    static let animationDuration = 0.6
 }

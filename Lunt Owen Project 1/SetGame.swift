@@ -24,10 +24,6 @@ struct SetGame {
         return deck.shuffled()
     }()
     
-//    init() {
-//        dealCards(numberOfCards: 12)
-//    }
-    
     private(set) var isMatched = false
     
     var dealtCards: [Card] = []
@@ -52,6 +48,7 @@ struct SetGame {
         }
     }
     
+    // Removes matching cards and replaces them in place
     mutating func removeAndReplace() {
         for i in 0..<dealtCards.count {
             if dealtCards[i].props.status == .matched {
@@ -61,6 +58,7 @@ struct SetGame {
         }
     }
     
+    // Just removes matching cards
     mutating func removeMatches() {
         for card in dealtCards {
             if card.props.status == .matched {
@@ -74,7 +72,7 @@ struct SetGame {
     mutating func choose(card: Card) {
         if isMatched {
             isMatched.toggle()
-            if deck.count > 0 && dealtCards.count == 12{
+            if deck.count > 0 && dealtCards.count == Constants.baseNumberOfCardsInPlay{
                 removeAndReplace()
             } else {
                 removeMatches()
@@ -98,6 +96,7 @@ struct SetGame {
         }
     }
     
+    // Unselects all of the current selected cards, happens when there is no match
     mutating func unselectSelectedCards() {
         for selectedCard in dealtCards {
             if selectedCard.props.status == .selected {
@@ -118,6 +117,7 @@ struct SetGame {
         }
     }
     
+    // Checks to see if each of the attributes of a card match the matching conditions
     func checkIfCardsMatch() -> Bool {
         let symbolCount = matchConditions(prop1: selectedCards[0].props.symbolCount, prop2: selectedCards[1].props.symbolCount, prop3: selectedCards[2].props.symbolCount)
         let shade = matchConditions(prop1: selectedCards[0].props.shade, prop2: selectedCards[1].props.shade, prop3: selectedCards[2].props.shade)
@@ -126,6 +126,7 @@ struct SetGame {
         return symbolCount && shade && color && symbol
     }
     
+    // Matching conditions are if the property is all the same or all different
     func matchConditions<Prop: Equatable>(prop1: Prop, prop2: Prop, prop3: Prop) -> Bool {
         return (prop1 == prop2 && prop2 == prop3 && prop3 == prop1) || (prop1 != prop2 && prop2 != prop3 && prop3 != prop1)
     }
@@ -133,4 +134,5 @@ struct SetGame {
 
 private struct Constants {
     static let maxSelectedCards = 3
+    static let baseNumberOfCardsInPlay = 12
 }

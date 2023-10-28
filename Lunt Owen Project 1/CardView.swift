@@ -27,17 +27,17 @@ struct CardView: View {
                         switch card.props.symbol {
                         case .oval:
                             Capsule().opacity(symbolOpacity)
-                            Capsule().stroke(lineWidth: 4)
+                            Capsule().stroke(lineWidth: CardConstants.strokeWidth)
                         case .diamond:
                             Diamond().opacity(symbolOpacity)
-                            Diamond().stroke(lineWidth: 4)
+                            Diamond().stroke(lineWidth: CardConstants.strokeWidth)
                         case .squiggle:
                             Squiggle().opacity(symbolOpacity)
-                            Squiggle().stroke(lineWidth: 4)
+                            Squiggle().stroke(lineWidth: CardConstants.strokeWidth)
                         }
                     }
                     .frame(height: size.height * CardConstants.heightRatio)
-                    .aspectRatio(0.5, contentMode: .fit)
+                    .aspectRatio(CardConstants.shapeAspectRatio, contentMode: .fit)
                 }
             }
         }
@@ -69,14 +69,10 @@ struct CardView: View {
     
     private struct CardConstants {
         static let aspectRatio: Double = 7/5
-        static let cornerRadius = 10.0
-        static let fontScaleFactor = 0.75
         static let heightRatio: Double = 0.8
         static let widthRatio: Double = 0.8
-    }
-    
-    private func systemFont(for size: CGSize) -> Font {
-        .system(size: min(size.width, size.height) * CardConstants.fontScaleFactor)
+        static let shapeAspectRatio: Double = 0.5
+        static let strokeWidth: Double = 4.0
     }
 }
 
