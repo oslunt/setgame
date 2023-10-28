@@ -9,45 +9,62 @@ import SwiftUI
 
 struct SetGameView: View {
     
-    private let size: CGFloat = 50.0
     
     let setGame: SetGameViewModel
     
     var body: some View {
-        GeometryReader { geomtry in
             VStack {
-                LazyVGrid(columns: columns(for: geomtry.size)) {
-                    ForEach(setGame.dealtCards) { card in
-                        CardView(card: card).onTapGesture {
-                            setGame.selectCard(card: card)
+                GeometryReader { geomtry in
+                    LazyVGrid(columns: columns(for: geomtry.size), spacing: 5) {
+                        ForEach(setGame.dealtCards) { card in
+                            CardView(card: card)
+                                .transition(AnyTransition.offset(randomOffScreenLocation))
+                                .onTapGesture {
+                                    setGame.selectCard(card: card)
+                                }
                         }
-                    }
+                    }.onAppear(perform: {
+                        setGame.dealCards(numberOfCards: 12)
+                    })
                 }
                 Spacer(minLength: 0)
                 HStack {
                     Button("New Game") {
                         setGame.newGame()
-                    }
+                    }.transition(AnyTransition.offset(randomOffScreenLocation))
                     Spacer()
-                    Button("Deal 3") {
+                    Button("Deal 3 Cards") {
                         setGame.dealCards(numberOfCards: 3)
                     }
                 }
             }
             .padding()
-        }
     }
     
     private func columns(for size: CGSize) -> [GridItem]{
-        let columns = Int(round(size.width / Game.desiredCardWidth))
-        //print((size.height / Game.desiredCardWidth))
-        return Array(repeating: GridItem(.flexible(minimum: Game.desiredCardWidth)), count: columns)
-        //Array(repeating: GridItem(.flexible()), count: Int(size.width / Game.desiredCa rdWidth))
+        var columns = 2.0
+        let visibleCards = setGame.dealtCards.count
+        var width = size.width
+        let height = size.height - 30
+        var rows = 4.0
+        repeat {            
+            columns += 1
+            width = size.width / columns
+            rows = ceil(Double(visibleCards) / columns)
+        } while ((width / 1.4) * rows) > height
+        return Array(repeating: GridItem(.flexible()), count: Int(columns))
     }
     
+    private var randomOffScreenLocation: CGSize {
+        let radius = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height) * 1.5
+        let factor: Double = Int.random(in: 0...1) > 0 ? 1 : -1
+        return CGSize(width: factor * radius, height: factor * radius)
+    }
     private struct Game {
-        static let desiredCardWidth = 115.0
+        static let desiredCardWidth = 120.0
         static let desiredCardHeight = 65.0
+        static let maxWidth = 360.0
+        static let maxHeight = 672.0
     }
 }
 

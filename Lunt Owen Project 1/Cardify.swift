@@ -27,10 +27,10 @@ struct Cardify: Animatable, ViewModifier {
     }
     
     private var fillColor: Color {
-        if card.isMatched {
-            return Color.green
-        } else if card.isSelected {
-            return Color.gray
+        if card.props.status == .matched {
+            return Color.green.opacity(0.5)
+        } else if card.props.status == .selected {
+            return Color.gray.opacity(0.5)
         } else {
             return Color.white
         }

@@ -8,111 +8,112 @@
 import Foundation
 
 struct SetGame {
-    static var deck: [Card] = {
+    var deck: [Card] = {
         var deck = [Card]()
         
         for symbolCount in CardSymbolCount.allCases {
             for shade in CardShade.allCases {
                 for color in CardColor.allCases {
                     for symbol in CardSymbol.allCases {
-                        deck.append(Card(props: CardInfo(symbol: symbol, color: color, shade: shade, symbolCount: symbolCount.rawValue)))
+                        deck.append(Card(props: CardInfo(symbol: symbol, color: color, shade: shade, symbolCount: symbolCount.rawValue, status: .unselected)))
                     }
                 }
             }
         }
         deck.shuffle()
-        for (index, var card) in deck.enumerated() {
-            if index < 12 {
-                card.props.status = .dealt
-            } else {
-                card.props.status = .inDeck
-            }
-        }
-        return deck
+        return deck.shuffled()
     }()
+    
+//    init() {
+//        dealCards(numberOfCards: 12)
+//    }
     
     private(set) var isMatched = false
     
-    var dealtCards: [Card] {
-        SetGame.deck.filter() {$0.isDealt}
-    }
+    var dealtCards: [Card] = []
     
     var selectedCards: [Card] {
-        SetGame.deck.filter() {$0.isSelected}
+        dealtCards.filter() {$0.props.status == .selected}
     }
     
     mutating func dealCards(numberOfCards: Int) {
-        if isMatched {
-            isMatched.toggle()
-            removeCardsFromPlay()
-        }
-        print(dealtCards.count)
-        if cardsDealt < Constants.numCards {
-            for cardsDealtIndex in cardsDealt ..< cardsDealt + numberOfCards {
-                cardsDealtIndex < SetGame.deck.count ? SetGame.deck[cardsDealtIndex].isDealt.toggle() :
-                    nil
+        if deck.count >  0 {
+            if isMatched {
+                isMatched.toggle()
+                removeAndReplace()
+            } else {
+                for i in 0..<numberOfCards {
+                    dealtCards.append(deck[i])
+                }
+                for _ in 0..<numberOfCards {
+                    deck.remove(at: 0)
+                }
             }
-            cardsDealt += numberOfCards
         }
-        
+    }
+    
+    mutating func removeAndReplace() {
+        for i in 0..<dealtCards.count {
+            if dealtCards[i].props.status == .matched {
+                dealtCards[i] = deck[0]
+                deck.remove(at: 0)
+            }
+        }
     }
     
     mutating func removeMatches() {
-        for var card in selectedCards {
-            if card.isMatched {
-                print(card)
-                card.isDealt.toggle()
-                card.isSelected.toggle()
-                print(card)
+        for card in dealtCards {
+            if card.props.status == .matched {
+                if let index = dealtCards.firstIndex(of: card) {
+                    dealtCards.remove(at: index)
+                }
             }
         }
     }
     
-    mutating func select(card: Card) {
+    mutating func choose(card: Card) {
         if isMatched {
             isMatched.toggle()
-            removeCardsFromPlay()
-            //print(dealtCards)
-            if dealtCards.count < 12{
-                dealCards(numberOfCards: 3)
+            if deck.count > 0 && dealtCards.count == 12{
+                removeAndReplace()
+            } else {
+                removeMatches()
             }
-            //Take cards off the screen and add 3 new cards
         }
         if selectedCards.count == Constants.maxSelectedCards {
             unselectSelectedCards()
         }
-        if let selectedCardIndex = SetGame.deck.firstIndex(of: card) {
-            SetGame.deck[selectedCardIndex].isSelected.toggle()
+        if let selectedCardIndex = dealtCards.firstIndex(of: card) {
+            if dealtCards[selectedCardIndex].props.status == .selected {
+                dealtCards[selectedCardIndex].props.status = .unselected
+            } else {
+                dealtCards[selectedCardIndex].props.status = .selected
+            }
         }
         if selectedCards.count == Constants.maxSelectedCards {
             isMatched = checkIfCardsMatch()
             if isMatched {
-                markSelectedCards()
-            }
-        }
-    }
-    
-    mutating func removeCardsFromPlay() {
-        for selectedMatchedCard in selectedCards {
-            if let selectedMatchedCardIndex = SetGame.deck.firstIndex(of: selectedMatchedCard) {
-                SetGame.deck[selectedMatchedCardIndex].isMatched ? SetGame.deck[selectedMatchedCardIndex].isDealt.toggle() :
-                    nil
+                markSelectedCardsAsMatched()
             }
         }
     }
     
     mutating func unselectSelectedCards() {
-        for selectedCard in selectedCards {
-            if let selectedCardIndex = SetGame.deck.firstIndex(of: selectedCard) {
-                SetGame.deck[selectedCardIndex].isSelected.toggle()
+        for selectedCard in dealtCards {
+            if selectedCard.props.status == .selected {
+                if let selectedCardIndex = dealtCards.firstIndex(of: selectedCard) {
+                    dealtCards[selectedCardIndex].props.status = .unselected
+                }
             }
         }
     }
     
-    mutating func markSelectedCards() {
-        for matchingCard in selectedCards {
-            if let matchingCardIndex = SetGame.deck.firstIndex(of: matchingCard) {
-                SetGame.deck[matchingCardIndex].isMatched.toggle()
+    mutating func markSelectedCardsAsMatched() {
+        for matchingCard in dealtCards {
+            if matchingCard.props.status == .selected {
+                if let matchingCardIndex = dealtCards.firstIndex(of: matchingCard) {
+                    dealtCards[matchingCardIndex].props.status = .matched
+                }
             }
         }
     }
@@ -131,6 +132,5 @@ struct SetGame {
 }
 
 private struct Constants {
-    static let numCards = 80
     static let maxSelectedCards = 3
 }

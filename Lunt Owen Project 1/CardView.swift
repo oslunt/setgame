@@ -12,25 +12,22 @@ struct CardView: View {
     
     var body: some View {
         GeometryReader { geometry in
-                ZStack {
-                    createCard(size: geometry.size)
-                }
-                .cardify(card: card)
-            }
+            createCard(size: geometry.size)
+            .cardify(card: card)
+        }
         .aspectRatio(CardConstants.aspectRatio, contentMode: .fit)
     }
     
     @ViewBuilder
     private func createCard(size: CGSize) -> some View {
-        let height = size.height * CardConstants.heightRatio
         HStack {
-            ForEach(0 ..< card.props.symbolCount) { _ in
+            ForEach(0 ..< card.props.symbolCount, id: \.self) { _ in
                 ZStack {
                     Group {
                         switch card.props.symbol {
                         case .oval:
-                            Oval().opacity(symbolOpacity)
-                            Oval().stroke(lineWidth: 4)
+                            Capsule().opacity(symbolOpacity)
+                            Capsule().stroke(lineWidth: 4)
                         case .diamond:
                             Diamond().opacity(symbolOpacity)
                             Diamond().stroke(lineWidth: 4)
@@ -38,13 +35,14 @@ struct CardView: View {
                             Squiggle().opacity(symbolOpacity)
                             Squiggle().stroke(lineWidth: 4)
                         }
-                    }.aspectRatio(0.5, contentMode: .fit)
+                    }
+                    .frame(height: size.height * CardConstants.heightRatio)
+                    .aspectRatio(0.5, contentMode: .fit)
                 }
-                .frame(height: height)
             }
         }
         .foregroundColor(symbolColor)
-            .padding()
+        .frame(width: size.width * CardConstants.widthRatio)
     }
     
     private var symbolColor: Color {
@@ -70,10 +68,11 @@ struct CardView: View {
     }
     
     private struct CardConstants {
-        static let aspectRatio: Double = 5/7
+        static let aspectRatio: Double = 7/5
         static let cornerRadius = 10.0
         static let fontScaleFactor = 0.75
-        static let heightRatio: Double = 0.3
+        static let heightRatio: Double = 0.8
+        static let widthRatio: Double = 0.8
     }
     
     private func systemFont(for size: CGSize) -> Font {
@@ -82,5 +81,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(card: Card(props: CardInfo(symbol: CardSymbol.oval, color: CardColor.green, shade: CardShade.shaded, symbolCount: 3)))
+    CardView(card: Card(props: CardInfo(symbol: CardSymbol.squiggle, color: CardColor.green, shade: CardShade.shaded, symbolCount: 3, status: .unselected)))
 }

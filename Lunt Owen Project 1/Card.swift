@@ -32,10 +32,9 @@ enum CardSymbolCount: Int, CaseIterable {
 }
 
 enum Statuses: Int, CaseIterable {
-    case dealt = 1
-    case inDeck = 2
-    case selected = 3
-    case matched = 4
+    case unselected = 1
+    case selected = 2
+    case matched = 3
 }
 
 typealias CardInfo = (symbol: CardSymbol, color: CardColor, shade: CardShade, symbolCount: Int, status: Statuses)

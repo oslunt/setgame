@@ -15,17 +15,22 @@ import SwiftUI
     }
     
     func dealCards(numberOfCards: Int) {
-        game.dealCards(numberOfCards: numberOfCards)
+        withAnimation(.easeIn(duration: 0.6)) {
+            game.dealCards(numberOfCards: numberOfCards)
+        }
     }
     
     func selectCard(card: Card) {
-        print("selectCard")
-        game.select(card: card)
+        withAnimation(.easeIn(duration: 0.6)) {
+            game.choose(card: card)
+        }
     }
     
     func newGame() {
-        print("newGame")
-        game = SetGameViewModel.createGame()
+        withAnimation(.easeIn(duration: 0.6)) {
+            game = SetGameViewModel.createGame()
+            dealCards(numberOfCards: Constants.initialDealCardsAmount)
+        }
     }
     
     var dealtCards: [Card] {
